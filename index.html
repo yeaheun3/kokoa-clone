@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <!-- status-bar는 3열로 되어있으므로 column이라는 class를 만들어줌. 근데 'column'은 너무 일반적인 이름이므로 
+        status-bar(부모)의 column(자식)이라는 것을 알 수 있게 하기 위해 'status-bar__column'로 지어줌. -->
+      <div class="status-bar__column">
+        <span>No service</span>
+        <!-- To Do: Wifi Icon -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <!-- Battery Icon -->
+        <!-- Lightning Icon -->
+        <i class="fas fa-battery-full"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <!--script는 항상 body태그를 닫기 직전, 마지막에 위치해야함-->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
