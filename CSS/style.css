@@ -1,0 +1,32 @@
+/* html에 link를 여러줄 만드는 것보다 css를 이용해 파일 import하는게 나음 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+/* 브라우저가 디폴트로 html에 적용시키는 스타일 없애주는 reset.css파일 추가 */
+@import "reset.css";
+/* style.css 파일에 다른 css 파일을 import하기
+css 코드를 여러 파일로 분할했다가 다시 합치는 것.
+특히 status-bar는 모든 화면에 상태바가 있기 때문에 분리함 */
+@import "status-bar.css";
+body {
+  font-family: "Pretendard", sans-serif;
+}
+
+.welcome-header {
+  margin: 90px 0px;
+  /* 이 때는 h1과 p와 같은 텍스트를 다루기 때문에 
+  display:flex보다 text-align:center를 써주는게 나음 */
+  text-align: center;
+  display: flex;
+  /* header와 title이 좌우로 놓이는 것이 아니라 위아래로 놓였으면 하므로 flex-direction: column;*/
+  flex-direction: column;
+  /*cross axis를 통해 가운데에 위치하게 하기 */
+  align-items: center;
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+}
