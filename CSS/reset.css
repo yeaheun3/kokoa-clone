@@ -349,3 +349,8 @@ template {
 [hidden] {
   display: none;
 }
+
+/* 아래와 같이 커스텀 가능 input 눌렀을 때 아웃라인 안 생기도록*/
+input:focus {
+  outline: none;
+}
