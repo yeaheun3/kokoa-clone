@@ -1,0 +1,63 @@
+.welcome-header {
+  margin: 90px 0px;
+  /* 이 때는 h1과 p와 같은 텍스트를 다루기 때문에 
+  display:flex보다 text-align:center를 써주는게 나음 */
+  text-align: center;
+  display: flex;
+  /* header와 title이 좌우로 놓이는 것이 아니라 위아래로 놓였으면 하므로 flex-direction: column;*/
+  flex-direction: column;
+  /*cross axis를 통해 가운데에 위치하게 하기 */
+  align-items: center;
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+/* input type이 submit인 것을 제외하고 아래와 같은 성질 부여하기 
+attribute selector*/
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  /* link 부분에 밑줄 지우기 */
+  text-decoration: none;
+  /* link(a)의 default 색상 바꾸기 -> 부모(login-form)의 특성 상속받기 */
+  color: inherit;
+  font-size: 13px;
+}

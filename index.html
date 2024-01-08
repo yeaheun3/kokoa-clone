@@ -31,12 +31,21 @@
         If you have Kokoa Account, log in with your email or your phone number.
       </p>
     </header>
-
-    <form id="login-form">
+    <!-- form은 action과 method라는 attributes를 가지고 있음 -->
+    <!-- action은 어떤 페이지로 data를 보낼건지 지정할 수 있음 -->
+    <!-- method는 post(백엔드 서버에 정보를 전송)와 get(url에 전송, url에 포함돼도 상관없는 정보)을 사용할 수 있음 -->
+    <!-- login 누르면 friends.html 페이지로 이동 -->
+    <form action="friends.html" method="get" id="login-form">
       <!--이런 form은 많지 않을거라 class가 아닌 id 설정-->
-      <input type="text" placeholder="Email or phone number" />
-      <input type="password" placeholder="Password" />
+      <input
+        name="username"
+        required
+        type="text"
+        placeholder="Email or phone number"
+      />
+      <input name="password" required type="password" placeholder="Password" />
       <input type="submit" value="Log In" />
+      <input type="submit" value="Sign Up" />
       <a href="#">Find Kokoa Account or Password</a>
     </form>
 
