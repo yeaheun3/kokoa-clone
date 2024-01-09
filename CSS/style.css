@@ -1,14 +1,15 @@
+/* style.css 파일에 다른 css 파일을 import하기 css 코드를 여러 파일로 분할했다가 다시 합치는 것. */
 /* html에 link를 여러줄 만드는 것보다 css를 이용해 파일 import하는게 나음 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 /* 브라우저가 디폴트로 html에 적용시키는 스타일 없애주는 reset.css파일 추가 */
 @import "reset.css";
-
-/* style.css 파일에 다른 css 파일을 import하기 
-css 코드를 여러 파일로 분할했다가 다시 합치는 것. */
 @import "variables.css";
 
 /* Components */
 @import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+
 /*Screens */
 @import "screens/login.css";
 
