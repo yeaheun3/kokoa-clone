@@ -1,0 +1,34 @@
+/* user-component에는 2개의 column이 있고 그 둘에 적용해주는 것,
+user-component__column:first-child에는 사진과 text가 있고 그 둘에 적용 */
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+/* .user-component__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aquamarine;
+} */
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+.user-component__title {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0px;
+}
+
+.user-component__subtitle {
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 18;
+}
