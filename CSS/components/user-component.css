@@ -1,3 +1,6 @@
+.user-component {
+  justify-content: space-between;
+}
 /* user-component에는 2개의 column이 있고 그 둘에 적용해주는 것,
 user-component__column:first-child에는 사진과 text가 있고 그 둘에 적용 */
 .user-component,
@@ -6,17 +9,10 @@ user-component__column:first-child에는 사진과 text가 있고 그 둘에 적
   align-items: center;
 }
 
-/* .user-component__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: aquamarine;
-} */
-
 .user-component__avatar {
   width: 70px;
   height: 70px;
-  border-radius: 25px;
+  border-radius: 30px;
   margin-right: 20px;
 }
 
@@ -31,4 +27,24 @@ user-component__column:first-child에는 사진과 text가 있고 그 둘에 적
   color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
   font-size: 18;
+}
+
+/** user-component__avatar의 modifier */
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 300;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
 }

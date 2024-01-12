@@ -35,22 +35,52 @@
     </header>
 
     <a id="friends-display-link"
-      ><i class="fa-solid fa-circle-info"></i>Friends' Name Display<i
-        class="fa-solid fa-chevron-right fa-xs"
-      ></i
-    ></a>
-    <!-- 사용자 프로필 형식(프사 / 이름)-->
-    <div class="user-component">
-      <!-- .user-component__column*2 : class name이 user-component__column인 것 두개 만들기 -->
-      <div class="user-component__column">
-        <img src="screenshots/profile.png" class="user-component__avatar" />
-        <div class="user-component__text">
-          <h4 class="user-component__title">조예은</h4>
-          <h6 class="user-component__subtitle">Please check my acoount.</h6>
+      ><i class="fa-solid fa-circle-info"></i>Friends' Name Display
+      <i class="fa-solid fa-chevron-right fa-xs"></i>
+    </a>
+
+    <!-- 사용자 프로필 형식(프사 / 이름)을 한 박스로 묶어주기 -->
+    <main class="friends-screen">
+      <div class="user-component">
+        <!-- .user-component__column*2 : class name이 user-component__column인 것 두개 만들기 -->
+        <div class="user-component__column">
+          <!-- class name 뒤에 --xl 붙이면 modifier  -->
+          <img
+            src="screenshots/profile.png"
+            class="user-component__avatar user-component__avatar--xl"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">조예은</h4>
+            <!-- <h5 class="user-component__subtitle">Please check my acoount.</h5> -->
+          </div>
+        </div>
+        <div class="user-component__column"></div>
+      </div>
+      <div class="friends-screen__channel">
+        <div class="friends-screen__channel-header">
+          <span>Channel</span>
+          <i class="fa-solid fa-chevron-up fa-xs"></i>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <!-- class name 뒤에 --sm 붙이면 modifier(사이즈 변화)  -->
+            <img
+              src="screenshots/profile.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                Channel
+              </h4>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span>2</span>
+            <i class="fa-solid fa-chevron-right fa-xs"></i>
+          </div>
         </div>
       </div>
-      <div class="user-component__column"></div>
-    </div>
+    </main>
 
     <!--Navigation bar : ul로 나뉘고 많은 li로 구성됨. li는 a를 가짐
     shortcut : nav>ul>li*4>a -->
