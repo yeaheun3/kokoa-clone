@@ -1,5 +1,6 @@
 .user-component {
   justify-content: space-between;
+  padding-bottom: 35px;
 }
 /* user-component에는 2개의 column이 있고 그 둘에 적용해주는 것,
 user-component__column:first-child에는 사진과 text가 있고 그 둘에 적용 */
@@ -12,7 +13,7 @@ user-component__column:first-child에는 사진과 text가 있고 그 둘에 적
 .user-component__avatar {
   width: 70px;
   height: 70px;
-  border-radius: 30px;
+  border-radius: 27px;
   margin-right: 20px;
 }
 

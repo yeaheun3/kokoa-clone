@@ -3,4 +3,6 @@ ex. padding : var(--variableName); 이렇게 쓰임 */
 :root {
   --yellow: #fae100;
   --horizontal-space: 25px; /** 공통 padding 값 */
+  --main-border: 1px solid rgba(0, 0, 0, 0.2);
+  --grey: rgba(0, 0, 0, 0.5);
 }
