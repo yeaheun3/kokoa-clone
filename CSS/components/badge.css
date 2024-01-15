@@ -9,3 +9,18 @@
   color: white;
   font-weight: 600;
 }
+
+.badge__circle-exclamation {
+  color: tomato;
+  padding-left: 3px;
+}
+
+.badge__update {
+  background-color: tomato;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  position: absolute;
+  right: -6px;
+  top: -7px;
+}

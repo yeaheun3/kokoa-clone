@@ -1,0 +1,17 @@
+/* component의 속성을 수정하면 모든 화면에서 변경되므로 
+sceen에 more class를 추가하여 따로 수정해줌. */
+
+.more-screen .icon-row__icon {
+  padding-bottom: 40px;
+}
+
+.more-suggestions {
+  margin-top: 50px;
+  border-top: var(--main-border);
+  padding-top: 40px;
+}
+
+.more-suggestions__title {
+  font-weight: 500;
+  margin-bottom: 30px;
+}

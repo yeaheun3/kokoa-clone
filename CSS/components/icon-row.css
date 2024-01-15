@@ -1,0 +1,24 @@
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.icon-row__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* icon-row__icon의 아이콘들만 font-size를 이용해서 크기 조절해주기 */
+.icon-row__icon i {
+  font-size: 35px;
+}
+
+/* icon-row__icon의 span에 margin-top 적용하여 여백 만들기 */
+.icon-row__icon span {
+  margin-top: 15px;
+}
