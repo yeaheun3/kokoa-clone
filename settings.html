@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--css파일 가져오는 링크 단축키 link:css 엔터!-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Kokoa Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <!-- status-bar는 3열로 되어있으므로 column이라는 class를 만들어줌. 근데 'column'은 너무 일반적인 이름이므로 
+        status-bar(부모)의 column(자식)이라는 것을 알 수 있게 하기 위해 'status-bar__column'로 지어줌. -->
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fas fa-battery-full fa-2x"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <!-- header.alt-header>div.alt-header__column*3 -->
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <i class="fa-solid fa-chevron-left fa-2x"></i>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Settings</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fa-solid fa-magnifying-glass fa-xl"></i></span>
+      </div>
+    </header>
+
+    <main class="main-screen">
+      <ul class="settings-list">
+        <li class="settings-setting">
+          <i class="fa-solid fa-bullhorn"></i>
+          <span>Notices</span>
+        </li>
+        <li class="settings-setting">
+          <i class="fa-solid fa-flask"></i>
+          <span>KoKoa Lab</span>
+        </li>
+        <li class="settings-setting">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Version</span>
+        </li>
+      </ul>
+    </main>
+
+    <!--Navigation bar : ul로 나뉘고 많은 li로 구성됨. li는 a를 가짐
+    shortcut : nav>ul>li*4>a -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"
+            ><i class="far fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <!--parent-->
+          <a class="nav__link" href="chats.html">
+            <!--child-->
+            <span class="nav__notification badge">1</span>
+            <i class="far fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <i class="fa-solid fa-ellipsis fa-2x"></i>
+            <div class="badge__update"></div
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--script는 항상 body태그를 닫기 직전, 마지막에 위치해야함-->
+    <script
+      src="https://kit.fontawesome.com/2b23ef432d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

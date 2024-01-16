@@ -15,3 +15,39 @@ sceen에 more class를 추가하여 따로 수정해줌. */
   font-weight: 500;
   margin-bottom: 30px;
 }
+
+.more-suggestions__icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.more-suggestions__icon {
+  /* icon__image와 icon_text가 중앙정렬 되도록 하기 위해서는
+  이 둘의 부모인 icon에 flex를 적용해줘야됨 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.more-suggestions__icon-image {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.more-suggestions__icon-image i {
+  font-size: 30px;
+  color: white;
+}
+
+.more-suggestions__icon-text {
+  margin-bottom: 30px;
+}
