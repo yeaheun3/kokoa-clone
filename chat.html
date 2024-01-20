@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--css파일 가져오는 링크 단축키 link:css 엔터!-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat w/조예은 - Kokoa Talk</title>
+  </head>
+  <body id="chat-screen">
+    <div class="status-bar">
+      <!-- status-bar는 3열로 되어있으므로 column이라는 class를 만들어줌. 근데 'column'은 너무 일반적인 이름이므로 
+        status-bar(부모)의 column(자식)이라는 것을 알 수 있게 하기 위해 'status-bar__column'로 지어줌. -->
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fas fa-battery-full fa-2x"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <!-- header.alt-header>div.alt-header__column*3 -->
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <!-- 이전 html 페이지로 연결 -->
+        <a href="javascript:history.back();">
+          <i class="fa-solid fa-chevron-left fa-2x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">한빈</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fa-solid fa-magnifying-glass fa-xl"></i></span>
+        <span><i class="fa-solid fa-bars fa-xl"></i></span>
+      </div>
+    </header>
+
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Saturday, January 20, 2024</div>
+      <div class="message-row">
+        <img src="screenshots/avatar.JPG" />
+        <div class="message-row__content">
+          <span class="message__author">한빈</span>
+          <div class="message__info">
+            <span class="message__bubble">사랑해!</span>
+            <span class="message__time">16:04</span>
+          </div>
+        </div>
+      </div>
+      <!-- modifier -->
+      <div class="message-row message-row__own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">내가 더 사랑해!</span>
+            <span class="message__time">16:04</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--script는 항상 body태그를 닫기 직전, 마지막에 위치해야함-->
+    <script
+      src="https://kit.fontawesome.com/2b23ef432d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

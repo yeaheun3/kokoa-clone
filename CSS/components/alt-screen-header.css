@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
+/* alt-header 요소들 중앙정렬 해주는 법 1)
+모든 열이 같은 너비를 가지게 width를 33%로 설정해주기 */
+.alt-header__column {
+  width: 33%;
+}
+
 .alt-header__title {
   font-size: 28px;
   font-weight: 600;
@@ -15,7 +21,26 @@
   margin-right: auto;
 }
 
+/* alt-header 요소들 중앙정렬 해주는 법 2)
+ 가운데 열 중앙정렬해주기. */
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+
+/* alt-header 요소들 중앙정렬 해주는 법 3)
+마지막 열을 display: flex; 적용해주고 justify-contnent: flex-end; */
 .alt-header__column:last-child {
   margin-left: auto;
-  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 마지막 .alt-header__column 내부의 span 중에서 
+첫 번째 자식이 아닌 모든 span에 마진을 적용하라는 의미 
+.alt-header__column:last-child span:not(:first-child) {
+  margin-left: 20px;
+} */
+
+.alt-header__column span:last-child {
+  margin-left: 20px;
 }

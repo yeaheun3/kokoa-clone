@@ -1,9 +1,15 @@
 .status-bar {
   display: flex;
   /* justify-content 대신 컨테이너 하나를 중심에 놓는 CSS hack */
-  /* justify-content: space-between;을 했을 때  컨테이너별로 다른 width를 가지고 있기 때문에 화면 중심에 와야할 요소가 중심에 오지 못함 */
+  /* justify-content: space-between;을 했을 때 
+  컨테이너별로 다른 width를 가지고 있기 때문에 화면 중심에 와야할 요소가 
+  중심에 오지 못함 */
   justify-content: center;
   padding: 5px 3px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .status-bar__column {
   width: 33%;

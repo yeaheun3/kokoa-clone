@@ -1,0 +1,111 @@
+#chat-screen {
+  background-color: #abc1d1;
+  /* 스크롤할 수 있게하려고 높이를 크게 지정해줌 */
+  height: 11000vh;
+}
+
+/* header와 status bar 뒤에 있는 요소가 스크롤할 때 겹치지 않도록
+배경색 지정해서 덮어주기 */
+#chat-screen .alt-header {
+  background-color: #abc1d1;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* z-index는 레이어 같은 것. 디폴트 값은 0이다. 값이 클 수록 위에 오게됨
+absolute position이나 fixed position에 대해서 설정가능 -> 요소를 고정하면 이전 box들과 다른 layer가 됨.
+z-index를 사용해주면 레이어 순서를 바꿔주듯이 겹치는 순서를 정할 수 있음. */
+#chat-screen .status-bar {
+  background-color: #abc1d1;
+  z-index: 2;
+}
+
+#chat-screen .alt-header {
+  top: 10px;
+}
+
+/* status bar와 header가 fixed되어 main <div> 부분을 덮고 있기 때문에 
+margin 값을 줘야 요소가 겹치지 않게 위치해서 보이게 됨. */
+.main-chat {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat__timestamp {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #92a4b2;
+  padding: 13px 15px;
+  font-size: 15px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.message__author {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 8px;
+}
+
+.message__time,
+.message__author {
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+/* message-row는 이미 flex container가 되어 있음.
+modifier에는 flex-end로 화면 끝에 가게만 해주기 */
+.message-row__own {
+  justify-content: flex-end;
+}
+
+.message-row__own .message__bubble {
+  background-color: var(--yellow);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0px;
+  margin-right: 0px;
+  margin-left: 8px;
+}
+
+/* 요소의 위치를 바꾸는 방법 1)
+order로 순서를 바꿀 수 있음 order는 flex-children에만 적용 
+.message-row__own .message__bubble {
+  order: 1;
+}
+.message-row__own .message__time {
+  order: 0;
+} */
+
+/* 요소의 위치를 바꾸는 방법 2) */
+.message-row__own .message__info {
+  flex-direction: row-reverse;
+}
