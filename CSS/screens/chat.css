@@ -235,7 +235,7 @@ reply__column:last-child > i 로 direct children 선택해줌 */
 .reply input에 transition 써줘야만 transform이 작동됨! */
 .reply input:focus {
   width: 95vw;
-  transform: translateX(-11%) translateY(-80px);
+  transform: translateX(-12.5%) translateY(-80px);
 }
 
 /* input에 focus했을 때 reply 배경이 아래로 내려가게 하기.

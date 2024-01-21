@@ -1,0 +1,28 @@
+/* 모든 HTML에 div를 넣어줘야 작동 */
+
+#no-mobile {
+  position: absolute;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  top: 0;
+}
+
+@media screen and (max-width: 645px) {
+  #no-mobile {
+    display: none;
+  }
+}
+
+/*
+@media screen and (min-width: 645px) {
+  #no-mobile {
+    display: flex;
+  }
+}
+*/
