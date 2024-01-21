@@ -29,3 +29,34 @@
   align-items: center;
   color: var(--grey);
 }
+
+/* problem 1: 이렇게 애니메이션 만들면 작동은 하지만 
+다시 from으로 돌아오기 때문에 splashScreen이 꺼지지 않음 */
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    /* problem 2 : 이 element가 계속 존재하기에 클릭할 수가 없음.
+    브라우저가 element를 무시하도록 visibility: hidden으로 설정 */
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  /* solution : forwards를 넣으면 애니메이션의 마지막 keyframe을
+  (final property value) 기억하고 유지하도록 함 */
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  /* animation이 바로 재생되는 것을 지연시킴 */
+  animation-delay: 1s;
+}
